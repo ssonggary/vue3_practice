@@ -37,7 +37,13 @@
 .icon-delete {
   background-image: url('/assets/img/icon/icon_delete_gray.png');
 }
-
 .icon-link {
   background-image: url('/assets/img/icon/icon_link_white.png');
+}
+
+/* button group */
+.btn-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
