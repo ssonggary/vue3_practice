@@ -10,7 +10,9 @@
     <Button icon="delete" variant="line">삭제</Button>
     <Button icon="link">CHECK</Button>
     <hr>
-    <Checkbox>체키라웃췍췍</Checkbox>
+    <Checkbox id="checkbox1" v-model="isChecked1">체키라웃췍췍</Checkbox>
+    <Checkbox id="checkbox3" v-model="isChecked3">체키라웃췍췍22</Checkbox>
+    <Checkbox id="checkbox2" v-model="isChecked2" disabled>체키라웃췍췍</Checkbox>
   </div>
 </template>
 <script>
@@ -23,6 +25,13 @@ export default {
     Button,
     ButtonGroup,
     Checkbox
+  },
+  data() {
+    return {
+      isChecked1: false,
+      isChecked2: false,
+      isChecked3: false,
+    }
   },
 }
 </script>

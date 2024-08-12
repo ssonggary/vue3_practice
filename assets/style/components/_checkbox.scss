@@ -17,5 +17,37 @@
     height: 16px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    display: inline-block;
+    position: relative;
   }
+  &.checked {
+    .checkbox__box::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      background: url(/assets/img/icon/icon_checked.png)no-repeat;
+      background-size: cover;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &.disabled {
+    cursor: default;
+    .checkbox__box::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      background: url(/assets/img/icon//icon_check_disabled.png)no-repeat;
+      background-size: cover;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.checkbox__label {
+  user-select: none;
 }
