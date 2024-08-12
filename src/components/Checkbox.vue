@@ -17,7 +17,6 @@
   </label>
 </template>
 <script>
-import { computed} from 'vue';
 
 export default {
   name: 'Checkbox',
@@ -39,11 +38,6 @@ export default {
       default: false
     },
   },
-  // methods: {
-  //   handleChange(event) {
-  //     this.$emit('update:modelValue', event.target.checked);
-  //   },
-  // }
   setup(props, { emit }) {
     const {id, disabled, modalValue} = props;
 
