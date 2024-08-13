@@ -40,6 +40,12 @@
     >
       라디오버튼 3
     </Radio>
+    <hr>
+    <RadioGroup 
+      v-model="selectedRadioOption"
+      name="radioGroup2"
+      :options="radioOptions"
+    ></RadioGroup>
   </div>
 </template>
 <script>
@@ -47,6 +53,7 @@ import Button from '@/components/Button.vue';
 import ButtonGroup from '@/components/ButtonGroup.vue';
 import Checkbox from '@/components/Checkbox.vue';
 import Radio from "@/components/Radio.vue";
+import RadioGroup from '@/components/RadioGroup.vue';
 
 export default {
   components: {
@@ -54,6 +61,7 @@ export default {
     ButtonGroup,
     Checkbox,
     Radio,
+    RadioGroup,
   },
   data() {
     return {
@@ -63,6 +71,14 @@ export default {
       isChecked3: false,
       // radio
       selectedOption: 'option1',
+      // radioGroup
+      selectedRadioOption: '',
+      radioOptions: [
+        {label: '라디오그룹1', value: 'op1', id: 'radio1', disabled: false},
+        {label: '라디오그룹2', value: 'op2', id: 'radio2', disabled: false},
+        {label: '라디오그룹3', value: 'op3', id: 'radio3', disabled: false},
+        {label: '라디오그룹4', value: 'op4', id: 'radio4', disabled: false}
+      ]
     }
   },
 }
