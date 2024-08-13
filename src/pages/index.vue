@@ -46,6 +46,20 @@
       name="radioGroup2"
       :options="radioOptions"
     ></RadioGroup>
+    <hr>
+    <CustomInput
+      v-model="inputValue"
+      :validate="validateInput"
+      label="DEFAULT"
+      placeholder="TXT"
+    ></CustomInput>
+    <CustomInput
+      v-model="inputValue"
+      :validate="validateInput"
+      label="블라인드 라벨"
+      placeholder="TXT"
+      :showLabel ='false'
+    ></CustomInput>
   </div>
 </template>
 <script>
@@ -54,6 +68,7 @@ import ButtonGroup from '@/components/ButtonGroup.vue';
 import Checkbox from '@/components/Checkbox.vue';
 import Radio from "@/components/Radio.vue";
 import RadioGroup from '@/components/RadioGroup.vue';
+import CustomInput from '@/components/CustomInput.vue';
 
 export default {
   components: {
@@ -62,6 +77,7 @@ export default {
     Checkbox,
     Radio,
     RadioGroup,
+    CustomInput,
   },
   data() {
     return {
@@ -78,9 +94,20 @@ export default {
         {label: '라디오그룹2', value: 'op2', id: 'radio2', disabled: false},
         {label: '라디오그룹3', value: 'op3', id: 'radio3', disabled: false},
         {label: '라디오그룹4', value: 'op4', id: 'radio4', disabled: false}
-      ]
+      ],
+      // input
+      inputValue: "",
     }
   },
+  methods: {
+    validateInput(value) {
+      if(!value) {
+        return "THIS IS AN ERROR MASSEGE.";
+      } else if (value.length < 5) {
+        return "5글자 이상 작성해주세요."
+      } return "";
+    }
+  }
 }
 </script>
 <style >
