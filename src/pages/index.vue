@@ -48,13 +48,13 @@
     ></RadioGroup>
     <hr>
     <CustomInput
-      v-model="inputValue"
+      v-model="FormData.name"
       :validate="validateInput"
       label="DEFAULT"
       placeholder="TXT"
     ></CustomInput>
     <CustomInput
-      v-model="inputValue"
+      v-model="FormData.email"
       :validate="validateInput"
       label="블라인드 라벨"
       placeholder="TXT"
@@ -96,7 +96,10 @@ export default {
         {label: '라디오그룹4', value: 'op4', id: 'radio4', disabled: false}
       ],
       // input
-      inputValue: "",
+      FormData: {
+        name: '',
+        email: '',
+      }
     }
   },
   methods: {
