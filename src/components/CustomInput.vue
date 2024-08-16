@@ -40,6 +40,7 @@
 </template>
 <script>
 export default {
+  name: 'CustomInput',
   props: {
     modelValue: String,
     type: {

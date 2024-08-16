@@ -60,6 +60,8 @@
       placeholder="TXT"
       :showLabel ='false'
     ></CustomInput>
+    <hr>
+    <Datepicker />
   </div>
 </template>
 <script>
@@ -69,6 +71,7 @@ import Checkbox from '@/components/Checkbox.vue';
 import Radio from "@/components/Radio.vue";
 import RadioGroup from '@/components/RadioGroup.vue';
 import CustomInput from '@/components/CustomInput.vue';
+import Datepicker from '@/components/Datepicker.vue';
 
 export default {
   components: {
@@ -78,6 +81,7 @@ export default {
     Radio,
     RadioGroup,
     CustomInput,
+    Datepicker,
   },
   data() {
     return {
@@ -99,7 +103,8 @@ export default {
       FormData: {
         name: '',
         email: '',
-      }
+      },
+      //datepicker
     }
   },
   methods: {
@@ -110,7 +115,7 @@ export default {
         return "5글자 이상 작성해주세요."
       } return "";
     }
-  }
+  },
 }
 </script>
 <style >
